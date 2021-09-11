@@ -30,36 +30,31 @@ const bicycle = [
 ]
 
 //Step 2: Verify wich bike has the lower weight
+let lighterBicycle  = bicycle[0] ; 
 
-//Style 1 ==> for of loop
-let lowerWeight  = bicycle[0].weight ; 
-let lowerBicycle ;
 for(let j of bicycle ){
     //Check
     console.log(j);
-    if(j.weight < lowerWeight ){
-        lowerBicycle = j;
+    if(j.weight < lighterBicycle.weight ){
+        lighterBicycle = j;
     }
 }
 
-console.log(`The lightest bike is ${lowerBicycle.name} and its weight is ${lowerBicycle.weight}`);
+console.log(`The lightest bike is ${lighterBicycle.name} and its weight is ${lighterBicycle.weight}`);
 
-//Style 2 ==> for loop
 /*
-let lowerWeight  = bicycle[0].weight ; 
-let lowerBicycle ;
+//Style 2 ==> for loop
+let lighterBicycle = bicycle[0];
 //Iterate through the array 
 for(let i = 0; i < bicycle.length; i++){   
     
     //Check if the condition is verified
-    if(bicycle[i].weight < lowerWeight ){
-        //Check
-        console.log('Inside the if block');
-        lowerBicycle = i;
+    if(bicycle[i].weight < lighterBicycle.weight ){
+        lighterBicycle = bicycle[i];
     }
 }
 
-console.log(`The lightest bike is ${bicycle[lowerBicycle].name} and its weight is ${bicycle[lowerBicycle].weight}`);
+console.log(`The lightest bike is ${lighterBicycle.name} and its weight is ${lighterBicycle.weight}`);
 */
 
 //------Snack 2------ 
@@ -109,4 +104,4 @@ console.table(footballTeams);
  */
  function randomNumberGenerator(min, max){
     return Math.floor(Math.random() * (max - min + 1)) + min;
-  }
+}
