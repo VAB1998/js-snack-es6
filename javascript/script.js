@@ -4,6 +4,7 @@
     Stampare a schermo la bici con peso minore.
 */
 
+//Step 1: Create an array of object (bicycles)
 const bicycle = [
     {
         name : 'Blanchi',
@@ -27,10 +28,18 @@ const bicycle = [
     }
 ]
 
+//Step 2: Verify wich bike has the lower weight
 let lowerWeight = bicycle[0].weight;
 
-for(let i = 0; i < bicycle.length; i++){
+//Iterate through the array 
+for(let i = 0; i < bicycle.length; i++){   
 
+    //Check if the condition is verified
+    if(bicycle[i].weight < lowerWeight ){
+        //Check
+        console.log('Inside the if block');
+        lowerWeight = bicycle[i].weight;
+    }
 }
 
 console.log(lowerWeight);
