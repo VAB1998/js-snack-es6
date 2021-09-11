@@ -1,3 +1,4 @@
+//Snack 1 completed
 /*
     Creare un array di oggetti: ogni oggetto descriverà una bici 
     da corsa con le seguenti proprietà: nome e peso.
@@ -38,8 +39,8 @@ for(let i = 0; i < bicycle.length; i++){
     if(bicycle[i].weight < lowerWeight ){
         //Check
         console.log('Inside the if block');
-        lowerWeight = bicycle[i].weight;
+        lowerWeight = i;
     }
 }
 
-console.log(lowerWeight);
+console.log(`The lightest bike is ${bicycle[lowerWeight].name} and its weight is ${bicycle[lowerWeight].weight}`);
