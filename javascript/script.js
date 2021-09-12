@@ -5,7 +5,7 @@
     Stampare a schermo la bici con peso minore.
 */
 
-//Step 1: Create an array of object (bicycles)
+// Step 1: Create an array of object (bicycles)
 const bicycle = [
     {
         name : 'Between',
@@ -40,7 +40,9 @@ for(let j of bicycle ){
     }
 }
 
-console.log(`The lightest bike is ${lighterBicycle.name} and its weight is ${lighterBicycle.weight}`);
+console.log('------Snack 1------');
+console.log(`The lightest bike is ${lighterBicycle.name} and its weight is ${lighterBicycle.weight} kg`);
+document.getElementById('lighter_bicycle').innerHTML = `The lightest bike is ${lighterBicycle.name} and its weight is ${lighterBicycle.weight} kg`;
 
 /*
 //Style 2 ==> for loop
@@ -69,7 +71,7 @@ console.log(`The lightest bike is ${lighterBicycle.name} and its weight is ${lig
 //Create an array of object (Teams)
 const footballTeams = [
     {
-        name : 'DC AC',
+        name : 'DC FC',
         score : 0,
         foulsSuffered : 0
     },
@@ -92,6 +94,7 @@ for(let i of footballTeams){
     i.foulsSuffered = randomNumberGenerator(0, 30);
 }
 //Write the array of objects to the console
+console.log('------Snack 2------');
 console.table(footballTeams);
 
 
@@ -105,3 +108,29 @@ console.table(footballTeams);
  function randomNumberGenerator(min, max){
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
+
+
+//------Snack 3------
+/*
+    -Scrivere una funzione che accetti tre argomenti: 
+    un array e due numeri (a più piccolo di b).
+    -La funzione ritornerà un nuovo array con i valori che hanno la posizione (indice)
+    compresa tra i due numeri specificati.
+*/
+
+const alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
+
+/**
+ * @param {array} array The array to check
+ * @param {number} minumumNumber Minimum number of the range
+ * @param {number} maximumNumber Maximum number of the range
+ * @returns {array}  Returns an array with the items that have the index in a given range of numbers
+ */
+function arrayItemsInAGivenRange(array, minumumNumber, maximumNumber){
+    
+    const newArray = array.filter((item, index) =>index >= minumumNumber && index <= maximumNumber );
+    return newArray
+}
+
+console.log('------Snack 3------');
+console.log( arrayItemsInAGivenRange(alphabet, 1, 5) );
